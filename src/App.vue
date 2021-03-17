@@ -1,28 +1,31 @@
 <template>
   <div id="app">
+    <top-menu></top-menu>
     <router-view/>
   </div>
 </template>
 
 <script>
 
-import MyPortfolio from '@/components/MyPortfolio'
+import TopMenu from './components/TopMenu.vue'
 
 export default {
   name: 'App',
   components: {
-    MyPortfolio
+    TopMenu
   }
 }
 </script>
 
 <style>
+body {
+  margin: auto;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
