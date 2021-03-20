@@ -6,4 +6,43 @@ color: rgb(235, 185, 22);
 padding:10px 0 20px 0;
 margin: auto;
 }
+.page-wrapper{
+    position: inherit;
+    margin:auto;
+    justify-content: center;
+    max-width: 80%;
+}
+/* /ボックス要素 */
+.box-wrapper{
+    width: 80%;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap; 
+  }
+  /* ▼モーダル▼ */
+  .modal-open {
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+  }
+  .modal-close {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    color: #fff;
+    z-index: 101;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  /* ▲モーダル▲ */
+  
 /* フォント */

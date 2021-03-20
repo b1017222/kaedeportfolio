@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="profile-wrapper">
+    <div class="page-wrapper">
       <h1 class="title">Profile</h1>
       <div class="line-eq-wrapper">
         <div class="profile-img">
@@ -45,13 +45,6 @@ export default {
 
 <style scoped>
 @import '../assets/styles/base.css';
-
-.profile-wrapper{
-    position: inherit;
-    margin:auto;
-    justify-content: center;
-    max-width: 80%;
-}
 
 .line-eq-wrapper{
     display: flex;
