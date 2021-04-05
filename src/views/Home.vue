@@ -1,15 +1,15 @@
 <template>
   <section>
-    <div class="page-wrapper">
-      <div class="box-wrapper">
         <div class="greet">
-          <h1 class="heading">{{ greet }}</h1>
+          <div class="row justify-content-center">
+            <h1 class="heading w-80">{{ greet }}</h1>
+          </div>
+          <div class="row justify-content-center">
             <div class="message">
-              <p>{{ message }}</p>
-            </div>
+            <p>{{ message }}</p>
+          </div>
+          </div>
         </div>
-      </div>
-    </div>
   </section>
 </template>
 
@@ -34,15 +34,16 @@ export default {
 }
 .message{
   margin: auto;
-  width:700px;
+  width:80%;
   font-size:16px;
   color:#424242;
 }
 .heading{
-  font-size:70px;
+  font-size:auto;
   font-weight:bolder;
   color:rgb(235, 185, 22);
   -webkit-text-stroke:2px #FFF;
+  padding-bottom:70px;
 }
 h1, h2 {
   font-weight: normal;

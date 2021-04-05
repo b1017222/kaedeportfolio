@@ -1,12 +1,14 @@
 <template>
-  <div class="header-color">
-    <ol>
-      <li v-for="(item, i) in items" :key=i>
-        <router-link v-bind:to= item.path>
-          {{ item.title }}
-        </router-link>
-      </li>
-    </ol>
+  <div class="row">
+    <div class="header-color">
+      <ul class="nav justify-content-end">
+        <li class="nav-item" v-for="(item, i) in items" :key='i'>
+          <router-link v-bind:to='item.path'>
+            {{ item.title }}
+          </router-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -28,7 +30,7 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.onScroll)
   },
-  destroyed () {
+  unmounted () {
     window.removeEventListener('scroll', this.onScroll)
   },
   methods: {

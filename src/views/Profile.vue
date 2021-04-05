@@ -1,27 +1,40 @@
 <template>
   <section>
     <div class="page-wrapper">
-      <h1 class="title">Profile</h1>
+      <div class="row">
+        <div class="col-12"> 
+          <h1 class="title">Profile</h1>
+        </div>
+      </div>
+      
       <div class="back-color">
-        <div class="line-eq-wrapper">
-          <div class="profile-img">
-            <img class="img-size" src="../assets/myface.png" tittle="プロフィール画像">
+        <div class="line-eq-wrapper row">
+          <div class="profile-img col-md-4 col-12 p-5">
+            <img class="img-size img-fluid" src="../assets/myface.png" tittle="プロフィール画像">
           </div>
-          <table>
-            <tbody>
-              <tr v-for="(item, i) in items" :key="i">
-                <th valign="top">{{ item.title }}</th>
-                <td valign="top" v-if="item.url" class="">
-                  <a :href="item.url" target="_blank" rel="noopener noreferrer" class="url-color">
-                    {{ item.value }}
-                  </a>
-                </td>
-                <td valign="top" v-else class="last-td">
-                  {{ item.value }}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="col-md-8 col-12">
+            <div class="row p-3">
+              <div class="col">
+              <table>
+                <tbody>
+                  <tr v-for="(item, i) in items" :key="i">
+                  <div class="row">
+                    <th valign="top" class="col-12 col-md-2">{{ item.title }}</th>
+                      <td valign="top" v-if="item.url" class="col-12 col-md-10">
+                      <a :href="item.url" target="_blank" rel="noopener noreferrer" class="url-color">
+                        {{ item.value }}
+                      </a>
+                      </td>
+                      <td valign="top" v-else class="last-td col-12 col-md-10">
+                        {{ item.value }}
+                      </td>
+                      </div>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -53,12 +66,11 @@ export default {
     justify-content: center;
     align-items: center;
     box-sizing:content-box;
-    margin: 0 auto 20px;;
-    padding: 30px 20px;
+
 }
 .img-size{
-    width: 200px;
-    padding-left:10px;
+  max-width: 100%;
+  height: auto;
 }
 .profile-img{
      display: inline-block;
@@ -67,17 +79,4 @@ p{
   margin: 0 auto;
  }
 /* ▲テーブル▲ */
-
-/* スマホ */
-/* @media (max-width: 670px) {
-    td {
-      display: block;
-      font-size: 16px;
-      width: 100%;
-      padding: 5px 0;
-      border-bottom: none;
-    }
-    .line-eq-wrapper{
-    }
-} */
 </style>

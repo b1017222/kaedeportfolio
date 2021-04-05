@@ -20,7 +20,7 @@
                             </td>
                         </tr>
                     </tbody>
-                    <button class="resize-btn" type="submit">Send</button>
+                    <button class="btn btn-warning" type="submit">Send</button>
                 </form>
             </div>
         </div>

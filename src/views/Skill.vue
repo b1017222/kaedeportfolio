@@ -1,32 +1,48 @@
 <template>
     <section>
         <div class="page-wrapper">
-            <h1 class="title">skill</h1>
-            <p>{{ message}}</p>
-            <div class="box-wrapper">
-                <div v-for="(skill, i) in skills" :key="i" class="card-wrapper back-color">
-                    <h3>{{ skill.title }}</h3>
-                    <ul>
-                        <li v-for="(lang, i) in skill.langs" :key="i">
-                            {{ lang.name }}
-                        </li>
-                    </ul>
-                </div>
-                <div class="table-wrapper back-color">
-                    <h3>インターン</h3>
-                    <table>
-                        <tbody>
-                            <tr v-for="(intern, i) in interns" :key="i">
-                                <th>{{ intern.name }}</th>
-                                <td>{{ intern.company }}</td>
-                                <td>{{ intern.contents }}</td>
-                                <td>{{ intern.detail }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+          <div class="row"><h1 class="title col">skill</h1></div>
+          <div class="row">
+            <div class="col">
+              <p>{{ message}}</p>
             </div>
-        </div>
+          </div>
+
+              <div class="box-wrapper row">
+                <div v-for="(skill, i) in skills" :key="i" class="card-wrapper back-color">
+                  <div class="row">
+                    <h3 class="col pt-3">{{ skill.title }}</h3>
+                  </div>
+                  <div class="row pt-3">
+                    <ul class="col-md-2 col-sm-12">
+                      <li v-for="(lang, i) in skill.langs" :key="i" >
+                        {{ lang.name }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+          <div class="table-wrapper back-color">
+            <div class="row">
+              <h3 class="col pt-3">インターン</h3>
+            </div>
+            
+              <table>
+                  <tbody>
+                      <tr v-for="(intern, i) in interns" :key="i">
+                        <div class="row pt-4">
+                          <th class="col-md-2 col-sm-12">{{ intern.name }}</th>
+                          <td class="col-md-2 col-sm-12">{{ intern.company }}</td>
+                          <td class="col-md-2 col-sm-12">{{ intern.contents }}</td>
+                          <td class="col-md-6 col-sm-12">{{ intern.detail }}</td>
+                        </div>
+                      </tr>
+                  </tbody>
+              </table>
+            
+          </div>
+      </div>
     </section>
 </template>
 
@@ -80,10 +96,11 @@ export default {
 </script>
 <style scoped>
 @import '../assets/styles/base.css';
-
+.row{
+  margin:0;
+}
 .card-wrapper{
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
-    width: 40%;
     vertical-align: top;
     margin: 20px;
     border-radius: 20px;
@@ -94,11 +111,12 @@ export default {
     border-radius: 20px;
 }
 ul{
-    padding:0%;
+    padding:10px;
+    margin: auto;
     list-style-type: none;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 150px);
+    grid-template-columns: repeat(3, 100px);
      /* @media(max-width: 1410px) {
             grid-template-columns: repeat(2, 200px);
     }
@@ -108,14 +126,12 @@ ul{
 }
 table {
     display: inline-block;
-    margin-left: 32px;
     text-align: left;
 }
 tr {
     height: 100px;
 }
 th {
-    padding-right: 20px;
     font-weight: normal;
     color: rgb(0, 0, 0);
 }
