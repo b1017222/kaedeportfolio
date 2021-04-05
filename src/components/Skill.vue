@@ -2,8 +2,9 @@
     <section>
         <div class="page-wrapper">
             <h1 class="title">skill</h1>
+            <p>{{ message}}</p>
             <div class="box-wrapper">
-                <div v-for="(skill, i) in skills" :key="i" class="card-wrapper">
+                <div v-for="(skill, i) in skills" :key="i" class="card-wrapper back-color">
                     <h3>{{ skill.title }}</h3>
                     <ul>
                         <li v-for="(lang, i) in skill.langs" :key="i">
@@ -11,7 +12,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="table-wrapper">
+                <div class="table-wrapper back-color">
                     <h3>インターン</h3>
                     <table>
                         <tbody>
@@ -34,6 +35,7 @@ export default {
   name: 'Skills',
   data () {
     return {
+      message: '各分野で主に扱っている言語の一覧をご紹介します。',
       skills: [
         {title: 'アルバイト',
           langs: [
@@ -89,7 +91,6 @@ export default {
     padding-bottom: 10px;
 }
 .table-wrapper{
-    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
     border-radius: 20px;
 }
 ul{

@@ -12,6 +12,26 @@ margin: auto;
     justify-content: center;
     max-width: 80%;
 }
+/* ▼テーブル▼ */
+table {
+  display: inline-block;
+  margin-left: 24px;
+  text-align: left;
+}
+tr {
+  height: 52px;
+}
+th {
+  padding-right: 20px;
+  font-weight: normal;
+  color: rgb(0, 0, 0);
+}
+td {
+  padding: 0 8px 5px 0;
+}
+a {
+text-decoration: none;
+}
 /* /ボックス要素 */
 .box-wrapper{
     width: 80%;
@@ -21,6 +41,12 @@ margin: auto;
     justify-content: center;
     flex-wrap: wrap; 
   }
+  .back-color{
+    background-color:#FFF;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+}
   /* ▼モーダル▼ */
   .modal-open {
     background: rgba(0, 0, 0, 0.4);

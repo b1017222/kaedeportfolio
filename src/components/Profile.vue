@@ -2,25 +2,27 @@
   <section>
     <div class="page-wrapper">
       <h1 class="title">Profile</h1>
-      <div class="line-eq-wrapper">
-        <div class="profile-img">
-          <img class="img-size" src="../assets/myface.png" tittle="プロフィール画像">
-        </div>
-        <table>
-          <tbody>
-            <tr v-for="(item, i) in items" :key="i">
-              <th>{{ item.title }}</th>
-              <td v-if="item.url" class="">
-                <a :href="item.url" target="_blank" rel="noopener noreferrer" class="url-color">
+      <div class="back-color">
+        <div class="line-eq-wrapper">
+          <div class="profile-img">
+            <img class="img-size" src="../assets/myface.png" tittle="プロフィール画像">
+          </div>
+          <table>
+            <tbody>
+              <tr v-for="(item, i) in items" :key="i">
+                <th valign="top">{{ item.title }}</th>
+                <td valign="top" v-if="item.url" class="">
+                  <a :href="item.url" target="_blank" rel="noopener noreferrer" class="url-color">
+                    {{ item.value }}
+                  </a>
+                </td>
+                <td valign="top" v-else class="last-td">
                   {{ item.value }}
-                </a>
-              </td>
-              <td v-else class="last-td">
-                {{ item.value }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>
@@ -51,9 +53,12 @@ export default {
     justify-content: center;
     align-items: center;
     box-sizing:content-box;
+    margin: 0 auto 20px;;
+    padding: 30px 20px;
 }
 .img-size{
-    width: 400px;
+    width: 200px;
+    padding-left:10px;
 }
 .profile-img{
      display: inline-block;
@@ -61,30 +66,6 @@ export default {
 p{
   margin: 0 auto;
  }
-/* ▼テーブル▼ */
-table {
-    display: inline-block;
-    margin-left: 32px;
-    text-align: left;
-}
-tr {
-    height: 52px;
-}
-th {
-    padding-right: 20px;
-    font-weight: normal;
-    color: rgb(0, 0, 0);
-}
-td {
-    font-size: 20px;
-    padding: 5px 8px 5px 0;
-}
-a {
-  text-decoration: none;
-}
-.url-color{
-    color: rgb(216, 80, 18);
-}
 /* ▲テーブル▲ */
 
 /* スマホ */

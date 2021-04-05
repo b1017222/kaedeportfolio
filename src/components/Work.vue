@@ -1,20 +1,23 @@
 <template>
 <section>
-    <div class="page-wrapper">
-        <h1 class="title">Work</h1>
-        <div class="box-wrapper">
-            <div v-for="(work, i) in works" :key="i" class="work-box">
-                <img width="10%" v-bind:src= "work.icon" class="div-cover" @click="openModal(i)"/>
-                <modal :ref='i'>
-                    <div class="contents">
-                        <h1>{{work.content}}</h1>
-                        <img width="25%" v-bind:src= "work.icon" />
-                        <button @click="closeModal(i)">閉じる</button>
-                    </div>
-                </modal>
+  <div class="page-wrapper">
+    <h1 class="title">Work</h1>
+    <p>{{ message }}</p>
+    <div class="box">
+      <div class="work-box" v-for="(work, i) in works" @key="i">
+          <img width="100%" v-bind:src= "work.icon" class="" @click="openModal(i)"/>
+          <modal @ref='i'>
+            <div class="contents">
+              <h1>{{work.name}}</h1>
+              <img width="25%" v-bind:src= "work.icon" />
+              <p>{{work.content}}</p>
+              <button @click="closeModal(i)">閉じる</button>
             </div>
+          </modal>
+          <div>{{work.name}}</div>
         </div>
     </div>
+  </div>
 </section>
 </template>
 
@@ -28,9 +31,10 @@ export default {
   },
   data () {
     return {
+      message: 'これまで作成した作品を載せていきます。更新予定です',
       works: [
-        {name: '神経衰弱', content: 'あああああ', icon: require('@/assets/aiueo.png')},
-        {name: 'Kaedesportfolio', content: 'いいいいいいい', icon: require('@/assets/yorokobi.png')}
+        {name: 'Kaedesportfolio', content: 'あああああ', icon: require('@/assets/samune1.png')},
+        {name: '神経衰弱ゲーム', content: 'いいいいいいい', icon: require('@/assets/samune2.png')}
       ]
     }
   },
@@ -47,29 +51,22 @@ export default {
 
 <style>
 @import '../assets/styles/base.css';
+.box{
+display: flex;
+justify-content: center;
+}
 .work-box{
-    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
-    width: 40%;
-    vertical-align: top;
-    margin: 0 20px 40px 0;
-    border-radius: 20px;
-    background-color: #fff;
-    position: relative;
-    padding-bottom: 64px;
+  width:400px;
+  padding:40px;
 }
-.contents {
-  background: #fff;
-  border-radius: 5px;
-  padding: 20px;
+.work-box img{
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
+  width:400px;
+  height:227px;
 }
-.div-cover{
-    background-size: cover;
-    background-position: 50% 50%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+.contents{
+  width:700px;
+  height:500px;
+  background-color:#FFF;
 }
 </style>
