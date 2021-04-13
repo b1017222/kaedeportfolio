@@ -43,7 +43,7 @@ export default {
       works: [
         {name: 'Kaedesportfolio', content: 'このポートフォリオサイトです。就活用に作成しましたがせっかくなのでモダンjsの学習も兼ねてVueを用いて作成しました。', language:'使用言語　 Vue.js HTML/CSS Bootstrap', icon: require('@/assets/samune1.png'), url:''},
         {name: '神経衰弱ゲーム', content: '一年ほど前にモバイルアプリで簡単なゲームを作ってみようと思いアルゴリズムの勉強も兼ねて作成しました。',language:'使用言語　 Kotlin', icon: require('@/assets/samune2.png'),url:'https://github.com/b1017222/ShinkeiSuijaku', value:'作品はこちらからどうぞ'},
-        {name: 'Todo-List', content: 'サーバーサイドの仕組みやDockerについてもう一度しっかりと勉強をしたいと思い作成しました。',language:'使用言語　 PHP(Laravel) HTML Docker MySQL', icon: require('@/assets/todolist.png'),url:'https://github.com/b1017222/ShinkeiSuijaku', value:'作品はこちらからどうぞ'}
+        {name: 'Todo-List', content: 'サーバーサイドの仕組みやDockerについてもう一度しっかりと勉強をしたいと思い作成しました。',language:'使用言語　 PHP(Laravel) HTML Docker MySQL', icon: require('@/assets/todolist.png'),url:'https://github.com/b1017222/Todo-List', value:'作品はこちらからどうぞ'}
       ]
     }
   },
