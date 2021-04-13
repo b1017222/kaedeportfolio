@@ -10,7 +10,7 @@
       <div class="back-color">
         <div class="line-eq-wrapper row">
           <div class="profile-img col-md-4 col-12 p-5">
-            <img class="img-size img-fluid" src="../assets/myface.png" tittle="プロフィール画像">
+            <img class="img-size img-fluid" src="@/assets/myface.png" tittle="プロフィール画像">
           </div>
           <div class="col-md-8 col-12">
             <div class="row p-3">
